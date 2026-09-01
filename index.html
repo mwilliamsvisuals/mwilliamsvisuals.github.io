@@ -79,11 +79,14 @@
 
         <!-- Text underneath both images -->
         <div class="description-box">
-                       <h2>US State Population Distribution</h2>
-            <p>This comparison maps total population tiers across the United States. <strong>The Tool Trade-off:</strong> Tableau provided an immediate, interactive drag-and-drop mapping interface powered by Mapbox, allowing for seamless custom text mark labels displaying exact population counts and a dynamic diverging color palette. On the other hand, R generated the visual programmatically using geospatial polygon layers (likely via <code>geom_sf()</code> or the <code>usmap</code> library). While R requires manual configuration for label formatting—resulting in default scientific notation labels like <code>3e+07</code> for 30 million—it offers complete open-source reproducibility, total coordinate projection control, and zero reliance on external enterprise software licenses.</p>
+            <h2>US State Population Distribution</h2>
+            <p>This page maps the total population of each state to compare how both tools build maps.</p>
+            <ul>
+                <li><strong>Tableau:</strong> Built instantly using drag-and-drop. It easily added clear number labels on top of each state.</li>
+                <li><strong>R:</strong> Built using lines of code. It keeps the design clean, but defaults to shorthand math numbers (like 3e+07 for 30 million) unless you write extra code to format them.</li>
+            </ul>
+        </div>
 
-
-    </div>
 
 
 
@@ -104,11 +107,14 @@
 
         <!-- Text underneath both images -->
         <div class="description-box">
-            <h2>Scatter Plot Comparison</h2>
-            <p><strong>The Tool Trade-off:</strong> R shines here by allowing instant statistical overlays like mathematical trendlines via <code>geom_smooth()</code>, whereas Tableau provides immediate tooltips and data filtering out-of-the-box.</p>
+            <h2>Scatterplot: Fox Weight vs. Fur Length</h2>
+            <p>This graph charts the physical traits of various fox species over two years (2024 and 2025) to see how weight compares to fur length.</p>
+            <ul>
+                <li><strong>Tableau:</strong> Uses hollow, ring-style data points by default. It makes tracking specific clusters straightforward but can feel a bit sparse without custom formatting.</li>
+                <li><strong>R:</strong> Uses bold, solid colored points that stand out clearly against the grid. The labels for the years are automatically colored to match each specific fox species group perfectly.</li>
+            </ul>
         </div>
 
-    </div>
 
 
 
@@ -122,10 +128,15 @@
             <h3>Built in Tableau</h3>
             <img src="Tableau-Box Plot.png" alt="Tableau Box Plot">
         </div>
-        <div class="description-box">
-            <h2>Box Plot Comparison</h2>
-            <p><strong>The Tool Trade-off:</strong> Box plots display distributions showing medians and outliers. R constructs these instantly with <code>geom_boxplot()</code>, while Tableau requires specific aggregation configurations to show individual data points properly.</p>
+                <div class="description-box">
+            <h2>Price Distribution by Diamond Cut</h2>
+            <p>This graph compares diamond prices based on the quality of their cut, showing the lowest prices, highest prices, and the middle ranges.</p>
+            <ul>
+                <li><strong>Tableau:</strong> Shows the summary boxes clearly, but places individual data points as thick vertical purple columns in the background. It creates an interesting visual texture but can sometimes make individual extreme prices blend together.</li>
+                <li><strong>R:</strong> Colors each box differently based on the cut grade using a clean color theme. It clearly stacks individual black outlier dots at the top, making it easy to spot exactly how high prices go for each category.</li>
+            </ul>
         </div>
+
     </div>
 
     <!-- PROJECT MODULE 4: TREEMAP -->
@@ -138,10 +149,15 @@
             <h3>Built in Tableau</h3>
             <img src="Tableau-Treemap.png" alt="Tableau Treemap">
         </div>
-        <div class="description-box">
-            <h2>Treemap Comparison</h2>
-            <p><strong>The Tool Trade-off:</strong> Treemaps show hierarchical proportions using nested rectangles. Tableau creates these natively via its 'Show Me' menu, whereas R requires installing an extension package like <code>treemapify</code> to integrate with ggplot.</p>
+               <div class="description-box">
+            <h2>Treemap: Makeup Brand Market Share</h2>
+            <p>This visualization uses nested colored rectangles to compare market sizes across different cosmetic brands.</p>
+            <ul>
+                <li><strong>Tableau:</strong> Generates a clean, simple grid view instantly. It makes it very easy to overlay text labels displaying both the brand name and the exact data values (like MAC at 1,300).</li>
+                <li><strong>R:</strong> Shines by allowing you to easily split the visual into separate regional panels (Europe and North America) using a coding concept called faceting. It makes comparing brand ratios across different continents incredibly easy.</li>
+            </ul>
         </div>
+
     </div>
 
     <!-- 🌟 SECTION BREAKER FOR R SPECIALS -->
@@ -156,10 +172,11 @@
             <h3>Programmatic Density Display (R ggplot2)</h3>
             <img src="R-Violin Plot.png" alt="R Violin Plot" style="max-width: 65%; margin: 0 auto;">
         </div>
-        <div class="description-box">
-            <h2>Violin Plot Distribution</h2>
-            <p><strong>Why R Excelled Here:</strong> Built seamlessly using <code>geom_violin()</code>, this layout combines a box plot and a smoothed density curve to highlight exactly where data peaks and mirrors. Tableau cannot generate this natively without complex, multi-layered data-padding workarounds.</p>
+               <div class="description-box">
+            <h2>Violin Plot: Price Density by Cut</h2>
+            <p>This advanced layout shows how diamond shapes mirror each other like instruments. <strong>Why R Excelled Here:</strong> It combines a box plot with a smooth curve. The wide sections show exactly where most diamond prices cluster, which Tableau cannot build natively without complex mathematical workarounds.</p>
         </div>
+
     </div>
 
     <!-- R SPECIAL 2: DENSITY PLOT -->
@@ -167,11 +184,11 @@
         <div class="visual-column">
             <h3>Probability Density Curve (R ggplot2)</h3>
             <img src="R-Density Plot.png" alt="R Density Plot" style="max-width: 65%; margin: 0 auto;">
+              <div class="description-box">
+            <h2>Density Plot of Price by Diamond Cut</h2>
+            <p>This chart stacks smooth continuous waves on top of each other to show price trends across different cuts. <strong>Why R Excelled Here:</strong> It blends transparent color layers perfectly so you can track where different diamond grades cross paths and overlap without blocking each other out.</p>
         </div>
-        <div class="description-box">
-            <h2>Continuous Density Analysis</h2>
-            <p><strong>Why R Excelled Here:</strong> Generated using <code>geom_density()</code>, this visualization maps a smooth estimate of data distribution over continuous intervals, avoiding the rigid, step-like bin constraints of a standard bar histogram.</p>
-        </div>
+
     </div>
 
     <!-- R SPECIAL 3: CORRELOGRAM MATRIX -->
@@ -180,11 +197,11 @@
             <h3>Multivariate Correlation Matrix (R corrplot)</h3>
             <img src="R-Correlogram.png" alt="R Correlogram Matrix" style="max-width: 65%; margin: 0 auto;">
         </div>
-        <div class="description-box">
-            <h2>Correlogram Relationship Mapping</h2>
-            <p><strong>Why R Excelled Here:</strong> Using programmatic libraries like <code>corrplot</code> or <code>GGally</code>, R can run hundreds of correlation calculations in milliseconds and render a visual matrix showing relationship directions and strengths instantly. In Tableau, this requires extensive manual calculation fields for every variable cross-product.</p>
+                <div class="description-box">
+            <h2>Correlogram: Fox Metric Correlations</h2>
+            <p>This grid checks relationships between fox measurements like fur length, weight, and fur density. <strong>Why R Excelled Here:</strong> It builds a custom correlation matrix instantly. Strong relationships show as deep red boxes with clear math scores (like fur density vs fur length at 0.96), mapping out your full dataset in a single step.</p>
         </div>
-    </div>
+
 
 </body>
 </html>

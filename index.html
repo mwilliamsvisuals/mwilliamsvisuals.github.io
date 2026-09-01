@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mwilliamsvisuals | Data Portfolio</title>
     <style>
-        /* This handles the overall look and font of your site */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,22 +18,25 @@
         }
         h1 { margin-bottom: 5px; color: #111; }
         
-        /* This magical CSS creates the side-by-side layout box */
         .comparison-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 30px;
             background: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             margin-bottom: 40px;
         }
         .visual-column {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .visual-column h3 {
             margin-top: 0;
+            width: 100%;
             color: #555;
             background: #eef2f7;
             padding: 8px;
@@ -42,7 +44,10 @@
         }
         img {
             max-width: 100%;
+            max-height: 450px;
+            width: auto;
             height: auto;
+            object-fit: contain;
             border: 1px solid #ddd;
             border-radius: 4px;
         }
@@ -62,22 +67,14 @@
 
     <!-- PROJECT MODULE 1: CHOROPLETH MAP -->
     <div class="comparison-container">
-        
-        <!-- Left Side: R Visual -->
         <div class="visual-column">
             <h3>Built in R (ggplot2)</h3>
-            <!-- Change 'map-choropleth-r.png' to match your exact file name later -->
             <img src="R-Choropleth Map.png" alt="R Choropleth Map">
         </div>
-
-        <!-- Right Side: Tableau Visual -->
         <div class="visual-column">
             <h3>Built in Tableau</h3>
-            <!-- Change 'map-choropleth-tableau.png' to match your exact file name later -->
             <img src="Tableau-Choropleth Map.png" alt="Tableau Choropleth Map">
         </div>
-
-        <!-- Text underneath both images -->
         <div class="description-box">
             <h2>US State Population Distribution</h2>
             <p>This page maps the total population of each state to compare how both tools build maps.</p>
@@ -86,26 +83,18 @@
                 <li><strong>R:</strong> Built using lines of code. It keeps the design clean, but defaults to shorthand math numbers (like 3e+07 for 30 million) unless you write extra code to format them.</li>
             </ul>
         </div>
-
-
-
+    </div>
 
     <!-- PROJECT MODULE 2: SCATTER PLOT -->
     <div class="comparison-container">
-        
-        <!-- Left Side: R Visual -->
         <div class="visual-column">
             <h3>Built in R (ggplot2)</h3>
             <img src="R-ScatterPlot.png" alt="R Scatter Plot">
         </div>
-
-        <!-- Right Side: Tableau Visual -->
         <div class="visual-column">
             <h3>Built in Tableau</h3>
             <img src="Tableau-ScatterPlot.png" alt="Tableau Scatter Plot">
         </div>
-
-        <!-- Text underneath both images -->
         <div class="description-box">
             <h2>Scatterplot: Fox Weight vs. Fur Length</h2>
             <p>This graph charts the physical traits of various fox species over two years (2024 and 2025) to see how weight compares to fur length.</p>
@@ -114,9 +103,7 @@
                 <li><strong>R:</strong> Uses bold, solid colored points that stand out clearly against the grid. The labels for the years are automatically colored to match each specific fox species group perfectly.</li>
             </ul>
         </div>
-
-
-
+    </div>
 
     <!-- PROJECT MODULE 3: BOX PLOT -->
     <div class="comparison-container">
@@ -128,7 +115,7 @@
             <h3>Built in Tableau</h3>
             <img src="Tableau-Box Plot.png" alt="Tableau Box Plot">
         </div>
-                <div class="description-box">
+        <div class="description-box">
             <h2>Price Distribution by Diamond Cut</h2>
             <p>This graph compares diamond prices based on the quality of their cut, showing the lowest prices, highest prices, and the middle ranges.</p>
             <ul>
@@ -136,7 +123,6 @@
                 <li><strong>R:</strong> Colors each box differently based on the cut grade using a clean color theme. It clearly stacks individual black outlier dots at the top, making it easy to spot exactly how high prices go for each category.</li>
             </ul>
         </div>
-
     </div>
 
     <!-- PROJECT MODULE 4: TREEMAP -->
@@ -149,7 +135,7 @@
             <h3>Built in Tableau</h3>
             <img src="Tableau-Treemap.png" alt="Tableau Treemap">
         </div>
-               <div class="description-box">
+        <div class="description-box">
             <h2>Treemap: Makeup Brand Market Share</h2>
             <p>This visualization uses nested colored rectangles to compare market sizes across different cosmetic brands.</p>
             <ul>
@@ -157,11 +143,10 @@
                 <li><strong>R:</strong> Shines by allowing you to easily split the visual into separate regional panels (Europe and North America) using a coding concept called faceting. It makes comparing brand ratios across different continents incredibly easy.</li>
             </ul>
         </div>
-
     </div>
 
     <!-- 🌟 SECTION BREAKER FOR R SPECIALS -->
-    <div style="grid-column: span 2; text-align: center; margin: 60px 0 30px 0; border-top: 3px double #ccc; padding-top: 30px;">
+    <div style="text-align: center; margin: 60px 0 30px 0; border-top: 3px double #ccc; padding-top: 30px;">
         <h1 style="color: #2c3e50;">🌟 Advanced Statistical Modeling in R</h1>
         <p style="font-style: italic; color: #7f8c8d;">Visualizations famously elegant to generate programmatically in R, but restrictive or unavailable natively in standard drag-and-drop tools.</p>
     </div>
@@ -172,11 +157,10 @@
             <h3>Programmatic Density Display (R ggplot2)</h3>
             <img src="R-Violin Plot.png" alt="R Violin Plot" style="max-width: 65%; margin: 0 auto;">
         </div>
-               <div class="description-box">
+        <div class="description-box">
             <h2>Violin Plot: Price Density by Cut</h2>
             <p>This advanced layout shows how diamond shapes mirror each other like instruments. <strong>Why R Excelled Here:</strong> It combines a box plot with a smooth curve. The wide sections show exactly where most diamond prices cluster, which Tableau cannot build natively without complex mathematical workarounds.</p>
         </div>
-
     </div>
 
     <!-- R SPECIAL 2: DENSITY PLOT -->
@@ -184,11 +168,11 @@
         <div class="visual-column">
             <h3>Probability Density Curve (R ggplot2)</h3>
             <img src="R-Density Plot.png" alt="R Density Plot" style="max-width: 65%; margin: 0 auto;">
-              <div class="description-box">
+        </div>
+        <div class="description-box">
             <h2>Density Plot of Price by Diamond Cut</h2>
             <p>This chart stacks smooth continuous waves on top of each other to show price trends across different cuts. <strong>Why R Excelled Here:</strong> It blends transparent color layers perfectly so you can track where different diamond grades cross paths and overlap without blocking each other out.</p>
         </div>
-
     </div>
 
     <!-- R SPECIAL 3: CORRELOGRAM MATRIX -->
@@ -197,12 +181,11 @@
             <h3>Multivariate Correlation Matrix (R corrplot)</h3>
             <img src="R-Correlogram.png" alt="R Correlogram Matrix" style="max-width: 65%; margin: 0 auto;">
         </div>
-                <div class="description-box">
+        <div class="description-box">
             <h2>Correlogram: Fox Metric Correlations</h2>
             <p>This grid checks relationships between fox measurements like fur length, weight, and fur density. <strong>Why R Excelled Here:</strong> It builds a custom correlation matrix instantly. Strong relationships show as deep red boxes with clear math scores (like fur density vs fur length at 0.96), mapping out your full dataset in a single step.</p>
         </div>
-
+    </div>
 
 </body>
 </html>
-

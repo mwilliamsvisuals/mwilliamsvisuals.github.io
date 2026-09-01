@@ -109,6 +109,83 @@
         </div>
 
     </div>
+
+
+
+    <!-- PROJECT MODULE 3: BOX PLOT -->
+    <div class="comparison-container">
+        <div class="visual-column">
+            <h3>Built in R (ggplot2)</h3>
+            <img src="R-Box Plot.png" alt="R Box Plot">
+        </div>
+        <div class="visual-column">
+            <h3>Built in Tableau</h3>
+            <img src="Tableau-Box Plot.png" alt="Tableau Box Plot">
+        </div>
+        <div class="description-box">
+            <h2>Box Plot Comparison</h2>
+            <p><strong>The Tool Trade-off:</strong> Box plots display distributions showing medians and outliers. R constructs these instantly with <code>geom_boxplot()</code>, while Tableau requires specific aggregation configurations to show individual data points properly.</p>
+        </div>
+    </div>
+
+    <!-- PROJECT MODULE 4: TREEMAP -->
+    <div class="comparison-container">
+        <div class="visual-column">
+            <h3>Built in R (treemapify)</h3>
+            <img src="R-Treemap.png" alt="R Treemap">
+        </div>
+        <div class="visual-column">
+            <h3>Built in Tableau</h3>
+            <img src="Tableau-Treemap.png" alt="Tableau Treemap">
+        </div>
+        <div class="description-box">
+            <h2>Treemap Comparison</h2>
+            <p><strong>The Tool Trade-off:</strong> Treemaps show hierarchical proportions using nested rectangles. Tableau creates these natively via its 'Show Me' menu, whereas R requires installing an extension package like <code>treemapify</code> to integrate with ggplot.</p>
+        </div>
+    </div>
+
+    <!-- 🌟 SECTION BREAKER FOR R SPECIALS -->
+    <div style="grid-column: span 2; text-align: center; margin: 60px 0 30px 0; border-top: 3px double #ccc; padding-top: 30px;">
+        <h1 style="color: #2c3e50;">🌟 Advanced Statistical Modeling in R</h1>
+        <p style="font-style: italic; color: #7f8c8d;">Visualizations famously elegant to generate programmatically in R, but restrictive or unavailable natively in standard drag-and-drop tools.</p>
+    </div>
+
+    <!-- R SPECIAL 1: VIOLIN PLOT -->
+    <div class="comparison-container" style="grid-template-columns: 1fr;">
+        <div class="visual-column">
+            <h3>Programmatic Density Display (R ggplot2)</h3>
+            <img src="R-Violin Plot.png" alt="R Violin Plot" style="max-width: 65%; margin: 0 auto;">
+        </div>
+        <div class="description-box">
+            <h2>Violin Plot Distribution</h2>
+            <p><strong>Why R Excelled Here:</strong> Built seamlessly using <code>geom_violin()</code>, this layout combines a box plot and a smoothed density curve to highlight exactly where data peaks and mirrors. Tableau cannot generate this natively without complex, multi-layered data-padding workarounds.</p>
+        </div>
+    </div>
+
+    <!-- R SPECIAL 2: DENSITY PLOT -->
+    <div class="comparison-container" style="grid-template-columns: 1fr;">
+        <div class="visual-column">
+            <h3>Probability Density Curve (R ggplot2)</h3>
+            <img src="R-Density Plot.png" alt="R Density Plot" style="max-width: 65%; margin: 0 auto;">
+        </div>
+        <div class="description-box">
+            <h2>Continuous Density Analysis</h2>
+            <p><strong>Why R Excelled Here:</strong> Generated using <code>geom_density()</code>, this visualization maps a smooth estimate of data distribution over continuous intervals, avoiding the rigid, step-like bin constraints of a standard bar histogram.</p>
+        </div>
+    </div>
+
+    <!-- R SPECIAL 3: CORRELOGRAM MATRIX -->
+    <div class="comparison-container" style="grid-template-columns: 1fr;">
+        <div class="visual-column">
+            <h3>Multivariate Correlation Matrix (R corrplot)</h3>
+            <img src="R-Correlogram.png" alt="R Correlogram Matrix" style="max-width: 65%; margin: 0 auto;">
+        </div>
+        <div class="description-box">
+            <h2>Correlogram Relationship Mapping</h2>
+            <p><strong>Why R Excelled Here:</strong> Using programmatic libraries like <code>corrplot</code> or <code>GGally</code>, R can run hundreds of correlation calculations in milliseconds and render a visual matrix showing relationship directions and strengths instantly. In Tableau, this requires extensive manual calculation fields for every variable cross-product.</p>
+        </div>
+    </div>
+
 </body>
 </html>
 
